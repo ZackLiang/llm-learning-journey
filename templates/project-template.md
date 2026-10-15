@@ -1,0 +1,1 @@
+# Project Template`n`n## Why I Started`n`n## Goal`n`n## Scope`n`n## Implementation Path`n`n## What I Built`n`n## Problems And Failed Attempts`n`n## Current Result`n`n## What I Learned`n`n## Next Step`n`n## References`n
