@@ -33,6 +33,7 @@ plugins:
 markdown_extensions:
   - admonition
   - attr_list
+  - md_in_html
   - tables
   - footnotes
   - toc:
@@ -67,4 +68,5 @@ nav:
   - Reflections:
       - Overview: reflections/index.md
       - Why This Repository: reflections/why-this-repo.md
+
 

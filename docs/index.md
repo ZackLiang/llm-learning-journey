@@ -1,48 +1,44 @@
-# LLM Learning Journey
+<div class="home-hero" markdown>
+<div class="hero-kicker"><span class="signal-dot"></span> PERSONAL LLM NOTEBOOK · 2026</div>
 
-<div class="hero-intro" markdown>
+# 把“我正在学”<br><em>变成看得见的旅程。</em>
 
-## 把“我正在学”变成看得见的旅程
-
-这是我的大模型学习档案：理论理解、亲手实现、项目阅读、论文笔记，以及那些还没有完全想明白的问题。
+记录大模型的理论、实现、项目阅读、论文笔记和工程探索。这里不是一套标准答案，而是一份持续生长的理解档案。
 
 [开始浏览学习地图](roadmap.md){ .md-button .md-button--primary }
 [查看项目记录](projects/index.md){ .md-button }
 
+<div class="hero-footnote"><span>01</span><span>understand</span><span class="line"></span><span>02</span><span>build</span><span class="line"></span><span>03</span><span>reflect</span></div>
 </div>
 
-## 这个网站记录什么？
+<div class="stat-strip">
+<div><strong>04</strong><span>learning tracks</span></div>
+<div><strong>00</strong><span>published notes</span></div>
+<div><strong>01</strong><span>active question</span></div>
+<div><strong>∞</strong><span>room to explore</span></div>
+</div>
 
-这里不追求做成一套标准课程。每一篇内容都可以是：
+<div class="section-intro" markdown>
+<div><div class="section-label">THE MAP</div>
+## 从理解模型，<br>到理解自己。
+</div>
+<div class="section-copy">学习记录不必每次都变成正式实验。有时是一段理论解释，有时是一次源码阅读，有时只是终于弄明白一个之前一直模糊的概念。<br><br>我把它们整理成四种形态：笔记、实现、项目和反思。</div>
+</div>
 
-- 一段对模型机制的重新解释；
-- 一个从零实现的小组件；
-- 一个开源项目的阅读和复现过程；
-- 一篇论文带来的问题和判断；
-- 一次部署、推理或训练中的踩坑。
+<div class="track-grid" markdown>
+<div class="track-card track-sage"><span class="track-number">01</span><span class="track-glyph">◌</span><h3>Model Internals</h3><p>Tokenizer · Attention · Transformer · KV Cache</p><a href="notes/model-internals/">Explore track <span>↗</span></a></div>
+<div class="track-card track-blue"><span class="track-number">02</span><span class="track-glyph">∿</span><h3>Training & Alignment</h3><p>Pretraining · SFT · LoRA · DPO · GRPO</p><a href="notes/training/">Explore track <span>↗</span></a></div>
+<div class="track-card track-yellow"><span class="track-number">03</span><span class="track-glyph">□</span><h3>Systems & Practice</h3><p>Inference · RAG · Tools · Agents · Evaluation</p><a href="notes/inference/">Explore track <span>↗</span></a></div>
+</div>
 
-## 学习方式
+<div class="latest-heading"><div><div class="section-label">LATEST ENTRIES</div><h2>还在路上</h2></div><span class="status-badge"><i></i> collecting ideas</span></div>
 
-我更关注四个问题：
+<div class="entry-list" markdown>
+<div class="entry-row"><span class="entry-date">01 / START</span><div><span class="entry-type">REFLECTION</span><h3><a href="reflections/why-this-repo/">为什么建立这个学习档案？</a></h3><p>把零散的阅读、代码和困惑整理成可以持续积累的个人记录。</p></div><span class="entry-arrow">↗</span></div>
+<div class="entry-row"><span class="entry-date">02 / READING</span><div><span class="entry-type">PROJECT NOTE</span><h3><a href="projects/agentic-rl-lab/">如何阅读 agentic-rl-lab</a></h3><p>一个项目如何把理论、实现过程、工具选择和踩坑记录在一起。</p></div><span class="entry-arrow">↗</span></div>
+<div class="entry-row"><span class="entry-date">03 / OPEN</span><div><span class="entry-type">OPEN QUESTION</span><h3><a href="projects/agentic-rl-lab/">PyTRIO 到底把哪些事情交给了云端？</a></h3><p>先理解训练流程，再决定是否亲自运行，而不是为了跑通而跑通。</p></div><span class="entry-arrow">↗</span></div>
+</div>
 
-1. 我到底想理解什么？
-2. 我是通过什么代码、论文或项目形成理解的？
-3. 哪些地方已经能解释，哪些地方仍然模糊？
-4. 下一步值得继续追什么？
-
-## 当前方向
-
-| 方向 | 内容 | 状态 |
-| --- | --- | --- |
-| Model Internals | Tokenizer、Attention、Transformer、KV Cache | 逐步建立基础 |
-| Training & Alignment | Pretraining、SFT、LoRA、DPO、GRPO | 正在整理 |
-| Evaluation | Benchmark、Judge、Reward Hacking | 待展开 |
-| Systems & Practice | Inference、RAG、Tools、Agents | 持续探索 |
-
-## 最近更新
-
-- [为什么建立这个学习档案？](reflections/why-this-repo.md)
-- [如何阅读 agentic-rl-lab](projects/agentic-rl-lab.md)
-- [大模型学习路线](roadmap.md)
-
-> 内容会随着学习过程持续更新。GitHub 仓库中的 Markdown 修改后，网站会由 GitHub Actions 自动重新构建和发布。
+<div class="home-note" markdown>
+<span class="note-mark">✦</span><div><strong>Learning in public, thinking in progress.</strong><br><span>内容会随学习过程持续更新，仓库中的 Markdown 修改后，网站会自动重新发布。</span></div>
+</div>
