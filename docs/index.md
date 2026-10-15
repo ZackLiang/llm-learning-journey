@@ -1,40 +1,51 @@
-<div class="voyage-hero" markdown>
-<div class="voyage-skyline"><span></span><span></span><span></span><span></span><span></span></div>
-<div class="voyage-copy">
-<div class="voyage-kicker"><span class="flag-dot"></span> GRAND LINE · PERSONAL LEARNING LOG</div>
-
-# 大模型学习航海日志
-
-## 向着理解的尽头出发。
-
-这不是一份已经完成的答案，而是我的航海记录：从 Transformer 出发，经过训练、推理、评测、RAG 和 Agent，一点一点找到属于自己的理解。
-
-<div class="voyage-actions"><a class="md-button md-button--primary" href="notes/transformer/">登上第一艘船</a><a class="md-button" href="roadmap/">查看航海图</a></div>
-
-<div class="voyage-meta"><span>LOG 001</span><span>NEW WORLD</span><span>LEARNING IN PROGRESS</span></div>
-</div>
-<div class="voyage-ship"><img src="assets/home/pirate-ship.svg" alt="公版海盗船插图"><div class="ship-label">THE LITTLE RESEARCHER</div></div>
-<div class="wave-line"></div>
+<div class="site-hero">
+  <div class="site-hero-overlay"></div>
+  <div class="site-hero-content">
+    <div class="site-hero-kicker">个人大模型学习记录 · 2026</div>
+    <h1>从理解模型开始，<br><em>记录每一步。</em></h1>
+    <p>这里记录大模型相关的理论、实现、项目阅读、论文笔记和工程探索。内容会随着学习持续更新。</p>
+    <div class="site-hero-actions">
+      <a class="md-button md-button--primary" href="notes/transformer/">开始阅读 Transformer</a>
+      <a class="md-button" href="roadmap/">查看学习路线</a>
+    </div>
+  </div>
 </div>
 
-<div class="voyage-intro" markdown>
-<div><div class="voyage-eyebrow">THE LOGBOOK</div>
-## 每一个概念，<br>都是一座岛。
-</div>
-<div class="voyage-copy-small">有些岛屿适合停下来读论文，有些适合亲手实现，还有些只有在踩坑之后才会出现。这个网站记录我走过的路线，也记录我还没有想明白的海域。</div>
-</div>
-
-<div class="island-grid" markdown>
-<div class="island-card island-green"><div class="island-top"><span>ISLAND 01</span><span>◎</span></div><h3>Transformer Island</h3><p>从 Token、Attention 到 KV Cache，先建立模型内部结构的地图。</p><a href="notes/transformer/">靠岸阅读 <span>↗</span></a></div>
-<div class="island-card island-blue"><div class="island-top"><span>ISLAND 02</span><span>∿</span></div><h3>Training Sea</h3><p>预训练、SFT、LoRA、DPO 与 GRPO，观察训练信号如何改变模型。</p><a href="notes/training/">靠岸阅读 <span>↗</span></a></div>
-<div class="island-card island-gold"><div class="island-top"><span>ISLAND 03</span><span>⌁</span></div><h3>Systems Port</h3><p>推理、量化、RAG、工具和 Agent，把模型带到真实世界。</p><a href="notes/inference/">靠岸阅读 <span>↗</span></a></div>
+<div class="home-intro">
+  <div>
+    <div class="home-eyebrow">学习内容</div>
+    <h2>把复杂的主题，<br>拆成可以理解的章节。</h2>
+  </div>
+  <p>这里不追求写成标准教材。每一篇内容都尽量保留学习过程：我想理解什么、论文和代码里真正关键的地方是什么、哪些地方仍然需要继续验证。</p>
 </div>
 
-<div class="voyage-section-head"><div><div class="voyage-eyebrow">LATEST LOGS</div><h2>航海日志</h2></div><span class="wanted-badge"><i></i> 仍在探索</span></div>
-<div class="log-list" markdown>
-<div class="log-entry"><span class="log-number">LOG 001</span><div><span class="log-type">FOUNDATION</span><h3><a href="notes/transformer/">Transformer 全貌</a></h3><p>先看清整艘船，再拆开每一个零件。</p></div><span class="log-mark">↗</span></div>
-<div class="log-entry"><span class="log-number">LOG 002</span><div><span class="log-type">PROJECT READING</span><h3><a href="projects/agentic-rl-lab/">Agentic RL Lab 阅读记录</a></h3><p>一个项目如何把训练、环境、成本和失败都写进学习过程。</p></div><span class="log-mark">↗</span></div>
-<div class="log-entry"><span class="log-number">LOG 003</span><div><span class="log-type">NEXT DESTINATION</span><h3><a href="notes/transformer/">Token 与 Embedding</a></h3><p>下一站：文字进入 Transformer 之前发生了什么。</p></div><span class="log-mark">↗</span></div>
+<div class="home-topic-grid">
+  <a class="home-topic home-topic-green" href="notes/transformer/">
+    <span class="topic-number">01</span><span class="topic-symbol">◌</span>
+    <h3>Transformer</h3><p>Token、Attention、Transformer Block、位置编码与 KV Cache。</p><span class="topic-link">进入专题 ↗</span>
+  </a>
+  <a class="home-topic home-topic-blue" href="notes/training/">
+    <span class="topic-number">02</span><span class="topic-symbol">∿</span>
+    <h3>训练与对齐</h3><p>预训练、SFT、LoRA、DPO、GRPO，以及训练信号的变化。</p><span class="topic-link">进入专题 ↗</span>
+  </a>
+  <a class="home-topic home-topic-gold" href="notes/inference/">
+    <span class="topic-number">03</span><span class="topic-symbol">□</span>
+    <h3>推理与系统</h3><p>推理过程、量化、KV Cache、RAG、工具和 Agent 系统。</p><span class="topic-link">进入专题 ↗</span>
+  </a>
 </div>
 
-<div class="voyage-footer-note" markdown><span class="compass">✦</span><div><strong>没有终点，只有下一座岛。</strong><br><span>修改 GitHub 仓库中的 Markdown 后，航海日志会自动更新到网页版。</span></div></div>
+<div class="home-section-heading"><div><div class="home-eyebrow">最近记录</div><h2>正在学习</h2></div><span class="home-status"><i></i>持续更新</span></div>
+
+<div class="home-entry-list">
+  <a class="home-entry" href="notes/transformer/">
+    <span class="entry-index">01</span><div><span class="entry-type">专题笔记</span><h3>Transformer 全貌</h3><p>从整体结构开始，理解 Encoder、Decoder 和 Decoder-only。</p></div><span class="entry-arrow">↗</span>
+  </a>
+  <a class="home-entry" href="projects/agentic-rl-lab/">
+    <span class="entry-index">02</span><div><span class="entry-type">项目阅读</span><h3>Agentic RL Lab</h3><p>记录对训练循环、环境交互、PyTRIO 和实验方法的理解。</p></div><span class="entry-arrow">↗</span>
+  </a>
+  <a class="home-entry" href="roadmap/">
+    <span class="entry-index">03</span><div><span class="entry-type">学习路线</span><h3>大模型学习地图</h3><p>从模型内部结构延伸到训练、评测、系统和应用。</p></div><span class="entry-arrow">↗</span>
+  </a>
+</div>
+
+<div class="home-note"><span class="home-note-mark">✦</span><div><strong>学习记录会不断变化。</strong><br><span>修改 GitHub 仓库中的 Markdown 后，网页版会自动重新构建。</span></div></div>
