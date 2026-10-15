@@ -43,14 +43,9 @@ Logits over vocabulary
 
 Transformer 之前，序列建模长期由 RNN、LSTM 等循环结构主导。循环结构每次处理一个位置，需要把前一步的 hidden state 传给下一步：
 
-```mermaid
-flowchart LR
-    x1[Token 1] --> r1[RNN step 1] --> h1[Hidden state]
-    h1 --> r2[RNN step 2]
-    x2[Token 2] --> r2 --> h2[Hidden state]
-    h2 --> r3[RNN step 3]
-    x3[Token 3] --> r3 --> h3[Hidden state]
-```
+![论文 Figure 1：Transformer 模型架构](../../assets/papers/transformer-figure-1.png){ .paper-figure }
+
+> 来源：Vaswani et al., *Attention Is All You Need*, Figure 1。原论文：[arXiv:1706.03762](https://arxiv.org/abs/1706.03762)。图中展示的是原始 Encoder–Decoder Transformer，不是现代 Decoder-only LLM 的完整结构。
 
 这种方式有两个明显限制：
 
@@ -66,23 +61,9 @@ flowchart LR
 
 下面的图先忽略具体张量维度，只看信息流：
 
-```mermaid
-flowchart TB
-    A[Raw text] --> B[Tokenizer]
-    B --> C[Token IDs]
-    C --> D[Token Embeddings]
-    P[Position information] --> E[Input representations]
-    D --> E
-    E --> F[Transformer Block 1]
-    F --> G[Transformer Block 2]
-    G --> H[...]
-    H --> I[Transformer Block N]
-    I --> J[Final hidden states]
-    J --> K[Linear projection to vocabulary]
-    K --> L[Logits]
-    L --> M[Sampling or argmax]
-    M --> N[Next token]
-```
+![论文 Figure 2：Scaled Dot-Product Attention 与 Multi-Head Attention](../../assets/papers/transformer-figure-2.png){ .paper-figure }
+
+> 来源：Vaswani et al., *Attention Is All You Need*, Figure 2。原论文：[arXiv:1706.03762](https://arxiv.org/abs/1706.03762)。这张图先作为后续 Attention 章节的预告，本章只记录它在整体结构中的位置。
 
 这张图里最容易被忽略的是：**Transformer 不是直接从文字生成文字**。它中间经过了很多层连续向量表示。每一层都在重新组织上下文信息，使得当前位置的表示包含越来越丰富的语义和关系。
 
@@ -90,20 +71,9 @@ flowchart TB
 
 把一个 Block 展开，可以得到：
 
-```mermaid
-flowchart TB
-    X[Input hidden states] --> A[Self-Attention]
-    X --> R1[Residual path]
-    A --> Add1[Add]
-    R1 --> Add1
-    Add1 --> N1[Normalization]
-    N1 --> F[Feed-Forward Network]
-    N1 --> R2[Residual path]
-    F --> Add2[Add]
-    R2 --> Add2
-    Add2 --> N2[Normalization]
-    N2 --> Y[Output hidden states]
-```
+![论文 Figure 1：Transformer 模型架构](../../assets/papers/transformer-figure-1.png){ .paper-figure }
+
+> 来源：Vaswani et al., *Attention Is All You Need*, Figure 1。这里重点观察一个 Block 如何重复堆叠，以及 Encoder、Decoder 两侧的子层差异。
 
 不同模型在顺序上会有差异。例如现代 LLM 常见 Pre-Norm 结构，会在 Attention 或 FFN 前进行 RMSNorm；原始论文常被画成 Post-Norm。阅读具体模型代码时，不能只凭“Transformer Block”这个名字假设内部顺序完全相同。
 
@@ -168,12 +138,9 @@ Encoder 可以让一个位置同时查看序列中其他位置，适合得到输
 
 代表模型：BERT。
 
-```mermaid
-flowchart LR
-    T[Input text] --> E[Encoder stack]
-    E --> H[Bidirectional representations]
-    H --> C[Classification / span prediction / embedding]
-```
+![论文 Figure 1：Transformer 模型架构](../../assets/papers/transformer-figure-1.png){ .paper-figure }
+
+> 来源：Vaswani et al., *Attention Is All You Need*, Figure 1。这里把原论文结构和现代 Decoder-only 模型的差别作为阅读笔记记录下来。
 
 BERT 的预训练任务是 Masked Language Modeling：随机遮住部分 token，让模型根据左右两侧上下文恢复它们。
 
@@ -190,14 +157,13 @@ Encoder 先读取输入，Decoder 再基于 Encoder 的表示逐步生成输出�
 
 代表模型：原始 Transformer、T5。
 
-```mermaid
-flowchart LR
-    S[Source sequence] --> E[Encoder]
-    E --> Z[Encoded representation]
-    T[Previous target tokens] --> D[Decoder]
-    Z --> D
-    D --> O[Next target token]
-```
+这里先不再绘制二次示意图，直接对照上面的论文 Figure 1：
+
+- 左侧是 Encoder stack：输入经过 Embedding 和 Position Encoding 后，进入重复堆叠的 Self-Attention 与 Feed-Forward 子层。
+- 右侧是 Decoder stack：除了 Masked Self-Attention 和 Feed-Forward，还包含连接 Encoder 输出的 Cross-Attention。
+- 图顶部的 Linear + Softmax 把 Decoder 最后的隐藏状态映射为输出 token 概率。
+
+后续读论文时，我需要特别区分：**原始论文的 Decoder 是 Encoder–Decoder 结构中的 Decoder，不等于今天 GPT 类模型所说的 Decoder-only。**
 
 它很适合输入和输出都具有明确边界的转换任务，例如机器翻译、摘要和文本到文本任务。
 
@@ -207,13 +173,9 @@ Decoder-only 模型只保留 Decoder 堆栈中的 Self-Attention 和 FFN，并�
 
 代表模型：GPT 系列以及许多现代通用大语言模型。
 
-```mermaid
-flowchart LR
-    A[Prompt tokens] --> D[Decoder-only Transformer]
-    D --> N[Next-token distribution]
-    N --> T[Sample one token]
-    T --> D
-```
+Decoder-only 的整体思想可以直接从论文 Figure 1 的右半部分抽象出来：保留 Decoder 侧的 Masked Self-Attention 和 Feed-Forward，去掉接收 Encoder 输出的 Cross-Attention。
+
+需要注意：这是一种学习上的结构对照，不把原始论文 Figure 1 误称为 GPT 的完整架构。现代模型还会使用 RoPE、RMSNorm、SwiGLU、GQA 等改进。
 
 它把各种任务统一成“给定前缀，预测后续 token”：
 

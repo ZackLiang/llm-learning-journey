@@ -1,4 +1,4 @@
-site_name: LLM Learning Journey
+site_name: 大模型学习记录
 site_description: Personal notes, implementations, projects, paper reading, and engineering exploration around large language models.
 site_url: https://zackliang.github.io/llm-learning-journey/
 repo_url: https://github.com/ZackLiang/llm-learning-journey
@@ -52,30 +52,30 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - Home: index.md
-  - Learning Map: roadmap.md
-  - Notes:
-      - Transformer:
-          - Overview: notes/transformer/index.md
+  - 学习地图: roadmap.md
+  - 笔记:
+      - Transformer 专题:
+          - 专题总览: notes/transformer/index.md
           - 01. Transformer 全貌: notes/transformer/01-big-picture.md
-          - Learning Reflection: notes/transformer/reflection.md
-      - Overview: notes/index.md
-      - Model Internals: notes/model-internals.md
-      - Training & Alignment: notes/training.md
-      - Evaluation: notes/evaluation.md
-      - Inference & Systems: notes/inference.md
-      - RAG & Agents: notes/rag-agents.md
-  - Implementations:
-      - Overview: implementations/index.md
-  - Projects:
-      - Overview: projects/index.md
-      - Agentic RL Lab: projects/agentic-rl-lab.md
-  - Paper Notes:
-      - Overview: paper-notes/index.md
-  - Engineering:
-      - Overview: engineering/index.md
-  - Reflections:
-      - Overview: reflections/index.md
-      - Why This Repository: reflections/why-this-repo.md
+          - 学习反思: notes/transformer/reflection.md
+      - 总览: notes/index.md
+      - 模型内部结构: notes/model-internals.md
+      - 训练与对齐: notes/training.md
+      - 评测: notes/evaluation.md
+      - 推理与系统: notes/inference.md
+      - RAG 与 Agent: notes/rag-agents.md
+  - 实现:
+      - 总览: implementations/index.md
+  - 项目:
+      - 总览: projects/index.md
+      - Agentic RL Lab 阅读: projects/agentic-rl-lab.md
+  - 论文笔记:
+      - 总览: paper-notes/index.md
+  - 工程记录:
+      - 总览: engineering/index.md
+  - 阶段反思:
+      - 总览: reflections/index.md
+      - 为什么建立这个仓库: reflections/why-this-repo.md
 
 
 
@@ -84,5 +84,6 @@ nav:
 extra_javascript:
   - https://unpkg.com/mermaid@11/dist/mermaid.min.js
   - javascripts/mermaid-init.js
+
 
 
