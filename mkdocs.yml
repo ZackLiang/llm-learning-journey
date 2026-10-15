@@ -1,0 +1,70 @@
+site_name: LLM Learning Journey
+site_description: Personal notes, implementations, projects, paper reading, and engineering exploration around large language models.
+site_url: https://zackliang.github.io/llm-learning-journey/
+repo_url: https://github.com/ZackLiang/llm-learning-journey
+repo_name: ZackLiang/llm-learning-journey
+edit_uri: edit/main/docs/
+theme:
+  name: material
+  language: zh
+  font: false
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Home: index.md
+  - Learning Map: roadmap.md
+  - Notes:
+      - Overview: notes/index.md
+      - Model Internals: notes/model-internals.md
+      - Training & Alignment: notes/training.md
+      - Evaluation: notes/evaluation.md
+      - Inference & Systems: notes/inference.md
+      - RAG & Agents: notes/rag-agents.md
+  - Implementations:
+      - Overview: implementations/index.md
+  - Projects:
+      - Overview: projects/index.md
+      - Agentic RL Lab: projects/agentic-rl-lab.md
+  - Paper Notes:
+      - Overview: paper-notes/index.md
+  - Engineering:
+      - Overview: engineering/index.md
+  - Reflections:
+      - Overview: reflections/index.md
+      - Why This Repository: reflections/why-this-repo.md
+

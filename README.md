@@ -4,7 +4,7 @@ Personal notes, implementations, projects, paper reading, and engineering explor
 
 ## Blog
 
-[Open the learning blog](blog/index.html)
+[Open the online learning blog](https://zackliang.github.io/llm-learning-journey/)
 
 The blog is a lightweight static page. Open it directly or serve the repository with `python -m http.server 8000`, then visit `http://localhost:8000/blog/`.
 
@@ -26,3 +26,4 @@ The blog is a lightweight static page. Open it directly or serve the repository 
 - [ ] Complete the first small implementation
 - [ ] Read and record an open-source LLM project
 - [ ] Publish the first blog entry
+
