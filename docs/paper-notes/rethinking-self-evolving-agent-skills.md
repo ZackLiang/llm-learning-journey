@@ -170,7 +170,7 @@ Execution Agent
 
 ## 4. 反馈条件
 
-### 7.3 Normal
+### 4.1 Normal
 
 优化器看到：
 
@@ -185,7 +185,7 @@ Execution Agent
 哪些策略需要修正
 ```
 
-### Fail-only
+### 4.2 Fail-only
 
 优化器只看到：
 
@@ -202,7 +202,7 @@ Execution Agent
 边界条件遗漏
 ```
 
-### 7.1 Success-only
+### 4.3 Success-only
 
 优化器只看到：
 
@@ -616,7 +616,7 @@ Validation 选择有一定有效性
 但仍有 2 个没有泛化到 Test
 ```
 
-### 7.1 Success-only 从未被选中
+### 10.5 Success-only 未被选中
 
 主实验中，最终选中的 11 个 Evolved Skill 全部来自：
 
@@ -809,4 +809,5 @@ Transfer
 
 - Liu et al., [Rethinking Self-Evolving Agent Skills: Feedback Dynamics over Multiple Rounds](https://arxiv.org/abs/2608.02636)
 - 论文原始 PDF 中的 Figure 1、Table 1、Table 2 已作为原图放入本文。
+
 
