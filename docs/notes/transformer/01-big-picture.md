@@ -1186,88 +1186,103 @@ MoE 可以让模型拥有较大的总参数量，但每个 token 只激活部分
 - 通信和并行调度复杂；
 - 需要 load balancing loss 等机制。
 
-## 14. 高频八股题
+## 14. 高频八股题：标准回答与解释
 
-### 14.1 Transformer 总体架构
+### 14.1 Transformer 为什么比 RNN 更适合大规模训练？
 
-1. Transformer 为什么比 RNN 更适合大规模训练？
-2. Transformer 为什么训练时可以并行，生成时通常不能并行？
-3. 原始 Transformer 是什么架构？
-4. Encoder-only、Encoder–Decoder、Decoder-only 分别适合什么任务？
-5. 原始 Transformer 的 Decoder 比 Encoder 多了什么？
-6. Self-Attention 和 Cross-Attention 有什么区别？
-7. Transformer 一个 Layer 包含哪些模块？
-8. 为什么 Transformer 可以堆叠很多层？
-9. Transformer 的输入输出张量形状通常是什么？
-10. 为什么现代大模型大多采用 Decoder-only？
+**标准回答：**Transformer 的 Self-Attention 可以在训练时并行计算整段序列，而 RNN 的时间步依赖前一时刻 hidden state，难以并行。此外，Attention 缩短了远距离 token 之间的信息交互路径，更易建模长距离依赖。
 
-### 14.2 Attention 与 Q/K/V
+**解释：**优势主要来自训练并行度和信息路径长度。代价是标准全注意力的计算和注意力矩阵空间开销随序列长度呈二次增长；自回归生成仍是逐 token 的。
 
-11. Q、K、V 分别是什么？
-12. Q、K、V 是怎么计算出来的？
-13. 为什么要计算 `QK^T`？
-14. 为什么 Attention 要除以 `sqrt(d_k)`？
-15. Softmax 在 Attention 中起什么作用？
-16. 为什么 V 不参与 score 的计算？
-17. Attention 的输出是什么？
-18. Self-Attention 的时间复杂度和空间复杂度是多少？
-19. Cross-Attention 中 Q、K、V 分别来自哪里？
-20. 为什么 Multi-Head Attention 需要多个 Head？
-21. 为什么 Multi-Head Attention 需要 Concat 和 Output Projection？
-22. Head 数量和 head dimension 如何确定？
-23. Attention 权重能否直接解释为模型的因果解释？
+### 14.2 一个 Transformer Block 包含哪些模块？
 
-### 14.3 Mask 与位置编码
+**标准回答：**典型 Block 包括 Self-Attention、Feed-Forward Network、Residual Connection 和 Normalization。原始 Encoder Layer 是 Self-Attention 子层加 FFN 子层；Decoder Layer 还包含 Masked Self-Attention 和 Encoder-Decoder Cross-Attention。
 
-24. Causal Mask 解决什么问题？
-25. Padding Mask 解决什么问题？
-26. Causal Mask 和 Padding Mask 有什么区别？
-27. Encoder 为什么通常不使用 Causal Mask？
-28. Decoder 为什么必须使用 Causal Mask？
-29. Sinusoidal Position Encoding 为什么使用 sin/cos？
-30. Learned Position Embedding 和 Sinusoidal Position Encoding 有什么区别？
-31. RoPE 为什么作用在 Q/K 上？
-32. RoPE 为什么能够表达相对位置关系？
-33. RoPE 的 base 和 scaling 是什么？
-34. ALiBi 和 RoPE 有什么区别？
-35. 训练长度和推理长度不一致会有什么问题？
+**解释：**Attention 负责位置间信息交换；FFN 负责位置内非线性变换；Residual 和 Norm 支持深层训练。具体顺序会因 Pre-Norm、Post-Norm 及模型实现而不同。
 
-### 14.4 FFN、残差和归一化
+### 14.3 Self-Attention 与 Cross-Attention 有什么区别？
 
-36. FFN 在 Transformer 中起什么作用？
-37. 为什么 FFN 要先升维再降维？
-38. ReLU、GELU、SiLU 有什么区别？
-39. SwiGLU 比普通 FFN 多了什么？
-40. SwiGLU 的两个分支分别做什么？
-41. Residual Connection 为什么能够帮助深层训练？
-42. LayerNorm 的归一化维度是什么？
-43. LayerNorm 和 BatchNorm 有什么区别？
-44. LayerNorm 和 RMSNorm 有什么区别？
-45. RMSNorm 为什么可以去掉均值中心化？
-46. Pre-Norm 和 Post-Norm 的公式是什么？
-47. Pre-Norm 为什么通常更容易训练深层模型？
-48. Post-Norm 为什么可能对 warm-up 更敏感？
-49. Pre-Norm 是否一定比 Post-Norm 好？
-50. Norm 中的 `epsilon` 起什么作用？
+**标准回答：**Self-Attention 的 Q、K、V 来自同一序列；Cross-Attention 的 Q 来自 Decoder 当前表示，K/V 来自 Encoder 输出，用来让 Decoder 读取输入序列信息。
 
-### 14.5 现代 LLM 与推理
+**解释：**区别是投影输入的来源，而不只是模块名称不同。Decoder-only 模型通常没有 Encoder，因此也没有原始 Encoder-Decoder Cross-Attention。
 
-51. MHA、MQA、GQA 分别是什么？
-52. GQA 如何减少 KV Cache？
-53. 为什么 GQA 只共享 K/V，不共享 Q？
-54. FlashAttention 优化的是什么？
-55. FlashAttention 是否改变 Attention 的数学结果？
-56. MoE 为什么可以总参数量很大但每个 token 激活参数较少？
-57. MoE 中 Router 做什么？
-58. MoE 为什么需要 load balancing loss？
-59. KV Cache 缓存的是什么？
-60. 为什么缓存 K/V，不缓存 Q？
-61. Prefill 和 Decode 有什么区别？
-62. KV Cache 的显存占用如何计算？
-63. 长上下文为什么会拖慢推理？
-64. TTFT 和 TPOT 分别是什么？
-65. PagedAttention 解决什么问题？
+### 14.4 原始 Transformer 和 GPT 类 Decoder-only 模型有什么关系？
 
+**标准回答：**原始论文提出 Encoder-Decoder Transformer；GPT 类模型保留 Transformer Decoder 的因果自注意力和 FFN 主体，去掉 Encoder 与连接 Encoder 的 Cross-Attention，并使用自回归 next-token prediction。
+
+**解释：**现代 Decoder-only 不是原始 Figure 1 的完整复制。RoPE、RMSNorm、SwiGLU、GQA 等是后续常见改造。
+
+### 14.5 为什么 Attention 需要位置编码？
+
+**标准回答：**Self-Attention 根据内容计算 token 之间的关系，本身不包含序列顺序信息。若不注入位置机制，模型无法可靠区分相同 token 的不同排列。
+
+**解释：**位置信息可以加到输入 Embedding 上，也可以作用于 Q/K，或作为 Attention score 的偏置。Sinusoidal、Learned Position Embedding、RoPE、ALiBi 是不同方案。
+
+### 14.6 为什么 Attention 使用 `QK^T / sqrt(d_k)`？
+
+**标准回答：**点积维度增加时，score 的方差通常增大，Softmax 更容易进入饱和区，导致梯度变小。除以 `sqrt(d_k)` 用于控制 score 尺度。
+
+**解释：**缩放因子来自点积各分量方差累加的尺度分析。它不是为了改变 token 的相对匹配定义，而是为了让数值范围更适合 Softmax 和优化。
+
+### 14.7 为什么 FFN 先升维再降维？
+
+**标准回答：**升维将表示投影到更大的特征空间，通过激活函数进行非线性组合，再降维回模型隐藏维度，以便与残差分支相加。
+
+**解释：**Attention 和 FFN 的功能不同：Attention 混合位置间信息，FFN 在每个位置上共享参数、独立进行特征变换。
+
+### 14.8 残差连接如何帮助深层 Transformer 训练？
+
+**标准回答：**残差形式为 `y=x+F(x)`。反向传播中存在恒等项 `I`，为梯度提供直接路径；前向传播中保留输入表示，使子层学习对输入的增量修改。
+
+**解释：**残差可以缓解深层优化和梯度传播困难，但不能单独保证梯度永远稳定，Normalization、初始化和学习率仍然重要。
+
+### 14.9 LayerNorm 和 RMSNorm 的区别是什么？
+
+**标准回答：**LayerNorm 先减去特征均值，再除以标准差，并使用可学习缩放和偏移；RMSNorm 不做均值中心化，只按均方根缩放，通常计算更简单。
+
+**解释：**对于 `[B,T,D]` 输入，两者通常都沿最后的 hidden dimension 对每个 token 独立计算。RMSNorm 在许多现代 LLM 中使用，但不意味着在任何任务和配置下都优于 LayerNorm。
+
+### 14.10 Pre-Norm 和 Post-Norm 有什么区别？
+
+**标准回答：**Post-Norm 是 `Norm(x+F(x))`，Pre-Norm 是 `x+F(Norm(x))`。Pre-Norm 保留更直接的残差路径，通常更容易训练深层模型；Post-Norm 更接近原始 Transformer 结构。
+
+**解释：**不能据此推断 Pre-Norm 一定不需要 warm-up，或 Post-Norm 的最终效果一定更好。训练稳定性和最终质量受初始化、学习率、残差缩放、深度和训练配方共同影响。
+
+### 14.11 为什么 Decoder-only 需要 Causal Mask？
+
+**标准回答：**自回归语言模型在位置 `t` 预测 token 时只能使用 `t` 及之前的 token，不能读取未来答案。Causal Mask 将未来位置的 attention score 设为负无穷，使 Softmax 后权重为零。
+
+**解释：**训练时虽然整条序列已知，但 Mask 保证并行计算不会泄漏未来 token；生成时该约束与逐 token 预测目标一致。
+
+### 14.12 为什么训练可以并行，生成却通常逐 token？
+
+**标准回答：**训练数据中的目标序列已知，模型可一次计算每个位置的 logits，并通过 Causal Mask 限制可见范围。生成时下一个 token 未知，必须先采样当前 token，再将其追加到前缀后预测下一 token。
+
+**解释：**训练与推理使用相同的条件概率分解，但可利用的信息不同。KV Cache 能避免重复计算历史 K/V，不能消除 token 之间的自回归依赖。
+
+### 14.13 MHA、MQA、GQA 的主要区别是什么？
+
+**标准回答：**MHA 中 Q head 通常各自拥有 K/V head；MQA 中所有 Q head 共享一组 K/V；GQA 将 Q head 分组，每组共享一组 K/V。GQA 通过减少 KV head 数降低 KV Cache 占用，是 MHA 与 MQA 的折中。
+
+**解释：**缓存大小与 KV head 数近似成正比。减少 KV head 通常可提升 Decode 的显存和带宽效率，但需要权衡模型质量。
+
+### 14.14 FlashAttention 改变了 Attention 数学公式吗？
+
+**标准回答：**FlashAttention 主要改变精确 Attention 的计算和内存访问实现，不改变其数学目标。它通过分块和 IO-aware 计算减少完整 `T×T` 中间矩阵在高带宽显存中的读写。
+
+**解释：**它优化的是 GPU 内存层级的数据搬运，而不只是减少乘加操作。工程上需要适配硬件和 kernel，具体版本可能采用不同实现策略。
+
+### 14.15 MoE 为什么能扩大总参数量而控制每 token 的计算量？
+
+**标准回答：**MoE 设置多个 Expert，由 Router 为每个 token 选择 Top-k 个 Expert 参与计算。因此总参数是所有 Expert 参数之和，但单个 token 只激活其中一部分。
+
+**解释：**MoE 的代价包括 Router 负载不均衡、专家间通信和调度复杂度，通常需要负载均衡机制。总参数量大不等于每个 token 都执行了全部参数。
+
+### 14.16 LM Head 的输出是什么？
+
+**标准回答：**LM Head 将 `[B,T,D]` 的最后隐藏状态投影到词表维度，得到 `[B,T,V]` logits。Logits 是未归一化分数，训练时可直接输入 Cross-Entropy；生成时再经过温度和采样策略选择 token。
+
+**解释：**模型的原始输出不是完整答案，而是每个位置对词表 token 的分数。部分模型会将输入 Embedding 与 LM Head 权重绑定，但这不是强制结构。
 ## 15. 高频八股题参考回答
 
 ### 15.1 Transformer 为什么比 RNN 更适合大规模训练？
@@ -1451,3 +1466,4 @@ Tokenizer
 4. Xiong et al., [On Layer Normalization in the Transformer Architecture](https://arxiv.org/abs/2002.04745)
 5. Su et al., [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864)
 6. Dao et al., [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135)
+
