@@ -38,6 +38,8 @@ markdown_extensions:
   - footnotes
   - toc:
       permalink: true
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.details
   - pymdownx.highlight
   - pymdownx.inlinehilite
@@ -56,7 +58,11 @@ nav:
   - 笔记:
       - Transformer 专题:
           - 专题总览: notes/transformer/index.md
-          - 01. Transformer 全貌: notes/transformer/01-big-picture.md
+          - 01. 整体架构: notes/transformer/01-big-picture.md
+          - 02. Attention 与位置编码: notes/transformer/02-attention-position.md
+          - 03. Block、FFN 与训练: notes/transformer/03-block-training.md
+          - 04. Decoder-only 与推理: notes/transformer/04-decoder-inference.md
+          - 05. 现代 Transformer: notes/transformer/05-modern-variants.md
           - 学习反思: notes/transformer/reflection.md
       - 总览: notes/index.md
       - 模型内部结构: notes/model-internals.md
@@ -84,6 +90,7 @@ nav:
 extra_javascript:
   - https://unpkg.com/mermaid@11/dist/mermaid.min.js
   - javascripts/mermaid-init.js
-
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 

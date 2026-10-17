@@ -347,11 +347,9 @@ X ∈ R^(T × D)
 
 通过三个可学习的线性投影得到：
 
-```text
-Q = XW_Q
-K = XW_K
-V = XW_V
-```
+\[
+Q=XW_Q,\qquad K=XW_K,\qquad V=XW_V
+\]
 
 Q、K、V 都来自隐藏状态，但投影参数不同，因此形成不同的表示空间。
 
@@ -373,10 +371,9 @@ Q/K/V 不是固定的“问题、索引、答案”三个语义标签，它们�
 
 公式：
 
-```text
-Attention(Q, K, V)
-= softmax(QKᵀ / √d_k)V
-```
+\[
+\operatorname{Attention}(Q,K,V)=\operatorname{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+\]
 
 计算步骤：
 
@@ -603,15 +600,15 @@ FFN 本质上是两层 MLP：
 
 如果使用行向量约定：
 
-```text
-FFN(x) = σ(xW₁ + b₁)W₂ + b₂
-```
+\[
+\operatorname{FFN}(x)=\sigma(xW_1+b_1)W_2+b_2
+\]
 
 如果使用列向量约定：
 
-```text
-FFN(x) = W₂σ(W₁x + b₁) + b₂
-```
+\[
+\operatorname{FFN}(x)=W_2\sigma(W_1x+b_1)+b_2
+\]
 
 设：
 
@@ -683,9 +680,9 @@ SwiGLU 的直觉是：
 
 ### 8.1 公式
 
-```text
-y = x + F(x)
-```
+\[
+y=x+F(x)
+\]
 
 在 Transformer 中，`F(x)` 可以是 Attention 子层或 FFN 子层。
 
@@ -699,9 +696,9 @@ y = x + F(x)
 
 反向传播时：
 
-```text
-dy/dx = 1 + dF(x)/dx
-```
+\[
+\frac{\partial y}{\partial x}=I+\frac{\partial F(x)}{\partial x}
+\]
 
 其中的 `1` 提供了一条直接的梯度路径。
 
@@ -733,10 +730,9 @@ LayerNorm 在最后一个 hidden dimension 上计算均值和方差：
 
 归一化结果：
 
-```text
-LayerNorm(x)
-= γ ⊙ (x - μ) / √(σ² + ε) + β
-```
+\[
+\operatorname{LayerNorm}(x)=\gamma\odot\frac{x-\mu}{\sqrt{\sigma^2+\epsilon}}+\beta
+\]
 
 其中：
 
@@ -770,9 +766,9 @@ RMSNorm 去掉 LayerNorm 中的均值中心化，只保留基于均方根的尺�
 RMS(x) = √(1/D Σx_i² + ε)
 ```
 
-```text
-RMSNorm(x) = γ ⊙ x / RMS(x)
-```
+\[
+\operatorname{RMSNorm}(x)=\gamma\odot\frac{x}{\operatorname{RMS}(x)}
+\]
 
 对比：
 
@@ -805,9 +801,9 @@ Norm
 
 公式：
 
-```text
-Output = Norm(x + F(x))
-```
+\[
+\operatorname{Output}=\operatorname{Norm}(x+F(x))
+\]
 
 原始 Transformer 采用的是类似 Post-Norm 的结构。
 
@@ -825,9 +821,9 @@ x + F(Norm(x))
 
 公式：
 
-```text
-Output = x + F(Norm(x))
-```
+\[
+\operatorname{Output}=x+F(\operatorname{Norm}(x))
+\]
 
 Pre-Norm 的残差路径更直接，通常更容易优化，尤其是在较深的 Transformer 中。
 

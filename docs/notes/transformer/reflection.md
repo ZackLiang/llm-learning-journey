@@ -1,11 +1,5 @@
-# Transformer 阶段反思
+# Transformer 学习记录
 
-完成第一章后，尝试回答：
+完成一个专题后，用自己的话写下能够解释的机制、仍需查证的细节、代码中看到的实现差异，以及下一次复习时最容易忘记的内容。
 
-- 我能否画出一个 token 从输入到输出的大致路径？
-- 我能否解释 Encoder、Decoder 和 Decoder-only 的区别？
-- 我能否说清楚现代 GPT 类模型为什么主要采用 Decoder-only？
-- 我能否指出 Attention、FFN、Residual 和 Normalization 在 Block 中的位置？
-- 哪些地方我只是记住了名词，还没有真正理解？
-
-下一章应当从 Token、Embedding 和张量形状开始，把“文字进入模型之前发生了什么”讲清楚。
+这页用于个人学习记录，不作为额外的知识章节或固定复习清单。
