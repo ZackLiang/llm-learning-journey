@@ -37,12 +37,12 @@ Verifier 是否可靠，能否提供可归因的反馈？
 
 | 方向 | 进化对象 | 代表论文 | 关键问题 |
 | --- | --- | --- | --- |
-| [记忆演化](01-memory-evolution.md) | 外部记忆、参数记忆、记忆策略 | UMEM、TMEM、MemRL、MemSkill | 经验应该记什么、忘什么、如何写入？ |
-| [Skill 与 SOP 演化](02-skill-sop-evolution.md) | 可执行 Skill、工具集、SOP | EvoSOP、Socratic-SWE、MUSE-Autoskill、CoEvoSkills | Skill 如何生成、验证、合并与剪枝？ |
-| [Verifier 与 Rubric 演化](03-verifier-rubric-evolution.md) | 验证器、规则、证据链 | DeepVerifier、RLCER、EVE-Agent | 反馈是否可信，能否真正指向修复方向？ |
-| [自生成任务与 Self-Play](04-self-play-curriculum.md) | 挑战任务、课程、角色策略 | R-Zero、Skill Self-Play、Native Evolution、SAGE | 谁出题，如何避免课程退化或无效更新？ |
-| [Agentic RL 与系统](05-agentic-rl-systems.md) | 策略、轨迹数据、控制平面 | AReaL 2.0、WebEvolver、AgentEvolver | 如何在生产环境收集轨迹并安全更新系统？ |
-| [评测、安全与反过拟合](06-evaluation-safety.md) | 选择规则、Skill 继承、评测器 | Rethinking、EvoMemBench、SkillEvoReg、SkillSandbox | 如何证明“进化”不是过拟合或额外采样？ |
+| [记忆演化](memory/index.md) | 外部记忆、参数记忆、记忆策略 | UMEM、TMEM、MemRL、MemSkill | 经验应该记什么、忘什么、如何写入？ |
+| [Skill 与 SOP 演化](skill-sop/index.md) | 可执行 Skill、工具集、SOP | EvoSOP、Socratic-SWE、MUSE-Autoskill、CoEvoSkills | Skill 如何生成、验证、合并与剪枝？ |
+| [Verifier 与 Rubric 演化](verifier-rubric/index.md) | 验证器、规则、证据链 | DeepVerifier、RLCER、EVE-Agent | 反馈是否可信，能否真正指向修复方向？ |
+| [自生成任务与 Self-Play](self-play-curriculum/index.md) | 挑战任务、课程、角色策略 | R-Zero、Skill Self-Play、Native Evolution、SAGE | 谁出题，如何避免课程退化或无效更新？ |
+| [Agentic RL 与系统](agentic-rl-systems/index.md) | 策略、轨迹数据、控制平面 | AReaL 2.0、WebEvolver、AgentEvolver | 如何在生产环境收集轨迹并安全更新系统？ |
+| [评测、安全与反过拟合](evaluation-safety/index.md) | 选择规则、Skill 继承、评测器 | Rethinking、EvoMemBench、SkillEvoReg、SkillSandbox | 如何证明“进化”不是过拟合或额外采样？ |
 
 ## 已核验的校企合作代表论文
 
