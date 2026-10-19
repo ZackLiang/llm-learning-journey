@@ -68,7 +68,7 @@
       </a>
       <a class="archive-entry" href="paper-notes/rethinking-self-evolving-agent-skills/">
         <span class="archive-entry__index">02</span>
-        <span class="archive-entry__body"><span class="archive-entry__type">论文解读</span><strong>Agent Skill 自进化的反馈动力学</strong><span class="archive-entry__summary">分析反馈条件、验证门控、泛化评测与测试时计算对照。</span></span>
+        <span class="archive-entry__body"><span class="archive-entry__type">论文阅读</span><strong>Agent Skill 自进化的反馈动力学</strong><span class="archive-entry__summary">分析反馈条件、验证门控、泛化评测与测试时计算对照。</span></span>
         <span class="archive-entry__arrow" aria-hidden="true">↗</span>
       </a>
       <a class="archive-entry" href="roadmap/">

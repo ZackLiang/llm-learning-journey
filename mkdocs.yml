@@ -74,9 +74,9 @@ nav:
       - 总览: implementations/index.md
   - 项目:
       - 总览: projects/index.md
-  - 论文笔记:
-      - Agent 自进化 Skill 论文解读: paper-notes/rethinking-self-evolving-agent-skills.md
-      - 总览: paper-notes/index.md
+  - 论文阅读:
+      - 专题总览: paper-notes/index.md
+      - Agent Skill 自进化的反馈动力学: paper-notes/rethinking-self-evolving-agent-skills.md
   - 工程记录:
       - 总览: engineering/index.md
   - 阶段反思:
