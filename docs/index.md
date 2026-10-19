@@ -71,8 +71,13 @@
         <span class="archive-entry__body"><span class="archive-entry__type">论文阅读</span><strong>Agent Skill 自进化的反馈动力学</strong><span class="archive-entry__summary">分析反馈条件、验证门控、泛化评测与测试时计算对照。</span></span>
         <span class="archive-entry__arrow" aria-hidden="true">↗</span>
       </a>
-      <a class="archive-entry" href="roadmap/">
+      <a class="archive-entry" href="projects/">
         <span class="archive-entry__index">03</span>
+        <span class="archive-entry__body"><span class="archive-entry__type">开源项目解读</span><strong>前沿开源项目解读</strong><span class="archive-entry__summary">从系统架构、源码路径、实验设计和工程取舍理解项目。</span></span>
+        <span class="archive-entry__arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="archive-entry" href="roadmap/">
+        <span class="archive-entry__index">04</span>
         <span class="archive-entry__body"><span class="archive-entry__type">学习路线</span><strong>大模型学习地图</strong><span class="archive-entry__summary">从模型内部结构延伸到训练、评测、推理系统和应用。</span></span>
         <span class="archive-entry__arrow" aria-hidden="true">↗</span>
       </a>

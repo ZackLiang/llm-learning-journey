@@ -72,8 +72,8 @@ nav:
       - RAG 与 Agent: notes/rag-agents.md
   - 实现:
       - 总览: implementations/index.md
-  - 项目:
-      - 总览: projects/index.md
+  - 前沿开源项目解读:
+      - 专题总览: projects/index.md
   - 论文阅读:
       - 专题总览: paper-notes/index.md
       - Agent Skill 自进化的反馈动力学: paper-notes/rethinking-self-evolving-agent-skills.md
