@@ -20,7 +20,7 @@ Inference → Quantization → Batching → Serving → Cost Accounting → Repr
 
 ## 05 · Applications
 
-RAG → Tool Calling → Agents → Long Context → Multimodal → Agentic RL
+RAG → Tool Calling → Agents → Long Context → Multimodal
 
 ## 记录状态
 
@@ -29,3 +29,4 @@ RAG → Tool Calling → Agents → Long Context → Multimodal → Agentic RL
 - **Building**：正在写代码或做项目
 - **Published**：整理成可以回看的页面
 - **Revisit**：之后需要重新验证
+

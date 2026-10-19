@@ -1,7 +1,5 @@
-# Projects
+# 项目记录
 
-相对完整的学习项目、源码阅读和复现记录。
+这里记录自己完成的实践项目、源码阅读、复现与改造过程。项目内容将在形成完整的个人学习产出后再陆续补充。
 
-## Current Projects
 
-- [Agentic RL Lab 阅读记录](agentic-rl-lab.md)

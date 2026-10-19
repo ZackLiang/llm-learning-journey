@@ -20,4 +20,6 @@ Inference latency, throughput, quantization, batching, serving, cost accounting,
 
 ## Applications
 
-RAG, tool calling, agents, long context, multimodal models, and agentic RL.
+RAG, tool calling, agents, long context, and multimodal models.
+
+

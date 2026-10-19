@@ -66,9 +66,9 @@
         <span class="archive-entry__body"><span class="archive-entry__type">专题笔记</span><strong>Transformer 架构与核心组件</strong><span class="archive-entry__summary">整体计算流程、Attention、FFN、Norm、Block、现代 LLM 和高频八股。</span></span>
         <span class="archive-entry__arrow" aria-hidden="true">↗</span>
       </a>
-      <a class="archive-entry" href="projects/agentic-rl-lab/">
+      <a class="archive-entry" href="paper-notes/rethinking-self-evolving-agent-skills/">
         <span class="archive-entry__index">02</span>
-        <span class="archive-entry__body"><span class="archive-entry__type">项目阅读</span><strong>Agentic RL Lab</strong><span class="archive-entry__summary">记录对训练循环、环境交互、PyTRIO 和实验方法的理解。</span></span>
+        <span class="archive-entry__body"><span class="archive-entry__type">论文解读</span><strong>Agent Skill 自进化的反馈动力学</strong><span class="archive-entry__summary">分析反馈条件、验证门控、泛化评测与测试时计算对照。</span></span>
         <span class="archive-entry__arrow" aria-hidden="true">↗</span>
       </a>
       <a class="archive-entry" href="roadmap/">
@@ -81,4 +81,6 @@
 
   <aside class="archive-note"><span>NOTE</span><p>这里的内容会随着学习不断修订。仓库中的 Markdown 修改后，网站会由 GitHub Actions 自动重新发布。</p></aside>
 </div>
+
+
 

@@ -74,7 +74,6 @@ nav:
       - 总览: implementations/index.md
   - 项目:
       - 总览: projects/index.md
-      - Agentic RL Lab 阅读: projects/agentic-rl-lab.md
   - 论文笔记:
       - Agent 自进化 Skill 论文解读: paper-notes/rethinking-self-evolving-agent-skills.md
       - 总览: paper-notes/index.md
@@ -94,6 +93,7 @@ extra_javascript:
   - javascripts/mathjax.js
   - javascripts/media-viewer.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 
 
 

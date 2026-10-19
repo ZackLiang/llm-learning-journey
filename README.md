@@ -37,7 +37,7 @@ mkdocs.yml         博客配置
 2. 预训练、SFT、LoRA 和偏好优化
 3. 推理、KV Cache、量化和服务系统
 4. RAG、工具调用和 Agent
-5. 多模态模型与 Agentic RL
+5. 多模态模型与 Agent 系统
 
 ## 笔记原则
 
@@ -56,3 +56,4 @@ python -m http.server 8000
 ```
 
 然后访问 `http://localhost:8000/` 或 `http://localhost:8000/blog/`。
+
