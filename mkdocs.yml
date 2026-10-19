@@ -74,7 +74,15 @@ nav:
       - 专题总览: projects/index.md
   - 论文阅读:
       - 专题总览: paper-notes/index.md
-      - Agent Skill 自进化的反馈动力学: paper-notes/rethinking-self-evolving-agent-skills.md
+      - Agent 自进化:
+          - 专题总览: paper-notes/agent-self-evolution/index.md
+          - 01. 记忆演化: paper-notes/agent-self-evolution/01-memory-evolution.md
+          - 02. Skill 与 SOP 演化: paper-notes/agent-self-evolution/02-skill-sop-evolution.md
+          - 03. Verifier 与 Rubric 演化: paper-notes/agent-self-evolution/03-verifier-rubric-evolution.md
+          - 04. 自生成任务与 Self-Play: paper-notes/agent-self-evolution/04-self-play-curriculum.md
+          - 05. Agentic RL 与系统: paper-notes/agent-self-evolution/05-agentic-rl-systems.md
+          - 06. 评测、安全与反过拟合: paper-notes/agent-self-evolution/06-evaluation-safety.md
+          - 单篇解读：Skill 自进化反馈动力学: paper-notes/rethinking-self-evolving-agent-skills.md
   - 个人项目:
       - 专题总览: personal-projects/index.md
       - 亲手实现: implementations/index.md
