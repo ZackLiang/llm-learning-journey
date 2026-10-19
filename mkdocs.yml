@@ -54,8 +54,9 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - Home: index.md
-  - 学习地图: roadmap.md
-  - 笔记:
+  - 学习笔记:
+      - 学习路线: roadmap.md
+      - 专题总览: notes/index.md
       - Transformer 专题:
           - 专题总览: notes/transformer/index.md
           - 01. 整体架构: notes/transformer/01-big-picture.md
@@ -64,22 +65,21 @@ nav:
           - 04. Decoder-only 与推理: notes/transformer/04-decoder-inference.md
           - 05. 现代 Transformer: notes/transformer/05-modern-variants.md
           - 学习反思: notes/transformer/reflection.md
-      - 总览: notes/index.md
       - 模型内部结构: notes/model-internals.md
       - 训练与对齐: notes/training.md
       - 评测: notes/evaluation.md
       - 推理与系统: notes/inference.md
       - RAG 与 Agent: notes/rag-agents.md
-  - 实现:
-      - 总览: implementations/index.md
   - 前沿开源项目解读:
       - 专题总览: projects/index.md
   - 论文阅读:
       - 专题总览: paper-notes/index.md
       - Agent Skill 自进化的反馈动力学: paper-notes/rethinking-self-evolving-agent-skills.md
-  - 工程记录:
-      - 总览: engineering/index.md
-  - 阶段反思:
+  - 个人项目:
+      - 专题总览: personal-projects/index.md
+      - 亲手实现: implementations/index.md
+      - 工程记录: engineering/index.md
+  - 碎碎念:
       - 总览: reflections/index.md
       - 为什么建立这个仓库: reflections/why-this-repo.md
 
