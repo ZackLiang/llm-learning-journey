@@ -100,4 +100,18 @@ Rethinking Self-Evolving Agent Skills
 - 是否属于严格校企合作；
 - 是否为同行评审论文、系统论文或近期预印本。
 
-单篇深度阅读从 [Rethinking Self-Evolving Agent Skills](../rethinking-self-evolving-agent-skills.md) 开始。
+## 解读完成度
+
+为避免将资料收集页误认为完整论文解读，专题中的文章按以下状态区分：
+
+| 状态 | 含义 |
+| --- | --- |
+| **详细解读** | 已回到论文原文核对方法、实验、图表和证据边界，并配有逐图逐表说明。 |
+| **资料卡，待深读** | 已核对论文身份、方向和公开摘要/方法信息，但尚未完成实验表格与原文图表的逐项解读。 |
+
+当前已完成的详细解读：
+
+- [Rethinking Self-Evolving Agent Skills](../rethinking-self-evolving-agent-skills.md)：反馈条件、验证门控、Test/Transfer 与 test-time scaling；
+- [UMEM](memory/umem.md)：记忆提取、语义邻域奖励、GRPO、主结果、消融和长期稳定性。
+
+其余论文暂保留为资料卡，后续将按相同标准逐篇扩写，不将摘要级信息包装为完整论文解读。

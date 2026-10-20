@@ -14,14 +14,16 @@ flowchart LR
     F --> B
 ```
 
-## 单篇解读
+## 待深读论文清单
 
-| 论文 | 反馈对象 | 单篇解读 |
+本方向的以下论文已列入研究地图，但尚未完成原文实验级解读。
+
+| 论文 | 反馈对象 | 重点阅读问题 |
 | --- | --- | --- |
-| DeepVerifier | 深度研究 Agent 的 rubric 验证 | [阅读](deepverifier.md) |
-| RLCER | 自演化 CoT Rubric 与 RL 信号 | [阅读](rlcer.md) |
-| EVE-Agent | 可验证证据链 | [阅读](eve-agent.md) |
-| SkillSandbox | Skill 的动态执行验证 | [阅读](skillsandbox.md) |
+| [DeepVerifier](https://arxiv.org/abs/2601.15808) | 深度研究 Agent 的 rubric 验证 | 失败 taxonomy 与 verifier 元评测如何设计？ |
+| [RLCER](https://arxiv.org/abs/2602.10885) | 自演化 CoT Rubric 与 RL 信号 | Rubric 是否会与 Reasoner 发生自我确认偏差？ |
+| [EVE-Agent](https://arxiv.org/abs/2605.22905) | 可验证证据链 | 证据的边际贡献如何被可靠评估？ |
+| [SkillSandbox](https://arxiv.org/abs/2610.10088) | Skill 的动态执行验证 | sandbox 对照是否能够代表真实任务效用？ |
 
 ## 阅读原则
 

@@ -16,16 +16,18 @@ flowchart LR
     H --> A
 ```
 
-## 单篇解读
+## 待深读论文清单
 
-| 论文 | 主要对象 | 单篇解读 |
+本方向尚未发布完整单篇解读。以下论文将在完成原文方法、实验表和证据边界核验后，逐篇转为本地文章。
+
+| 论文 | 主要对象 | 重点阅读问题 |
 | --- | --- | --- |
-| EvoSOP | 原子动作到高阶 SOP | [阅读](evosop.md) |
-| Socratic-SWE | 编码 Agent Skill 与课程生成 | [阅读](socratic-swe.md) |
-| MUSE-Autoskill | Skill 生命周期 | [阅读](muse-autoskill.md) |
-| CoEvoSkills | Skill Package 与 Surrogate Verifier | [阅读](coevoskills.md) |
-| SkillScriptBench | 可执行 Skill Package 评测 | [阅读](skillscriptbench.md) |
-| SkillEvoReg | 演化中的过拟合与正则 | [阅读](skillevoreg.md) |
+| [EvoSOP](https://arxiv.org/abs/2607.07321) | 原子动作到高阶 SOP | SOP 构建、合并、评估与剪枝如何协同？ |
+| [Socratic-SWE](https://arxiv.org/abs/2606.07412) | 编码 Agent Skill 与课程生成 | Skill 如何驱动可验证任务生成与 Solver 更新？ |
+| [MUSE-Autoskill](https://arxiv.org/abs/2605.27366) | Skill 生命周期 | Skill 如何创建、检索、修订、合并与退役？ |
+| [CoEvoSkills](https://arxiv.org/abs/2604.01687) | Skill Package 与 Surrogate Verifier | 生成器与替代验证器如何避免共同偏差？ |
+| [SkillScriptBench](https://arxiv.org/abs/2610.04008) | 可执行 Skill Package 评测 | Skill 如何在安装、执行、修复与迁移层面被评估？ |
+| [SkillEvoReg](https://arxiv.org/abs/2609.30861) | 演化中的过拟合与正则 | 如何避免 Skill 库膨胀和局部验证过拟合？ |
 
 ## 阅读重点
 

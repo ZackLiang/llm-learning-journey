@@ -15,15 +15,17 @@ flowchart LR
     G --> A
 ```
 
-## 单篇解读
+## 待深读论文清单
 
-| 论文 | 关键角色 | 单篇解读 |
+本方向尚未发布完整单篇解读。以下论文将按“任务生成机制、验证方式、外部泛化、课程退化风险”四个维度逐篇展开。
+
+| 论文 | 关键角色 | 重点阅读问题 |
 | --- | --- | --- |
-| R-Zero | Challenger + Solver | [阅读](r-zero.md) |
-| Socratic-SWE | Skill → Task → Solver | [阅读](../skill-sop/socratic-swe.md) |
-| Skill Self-Play | Proposer + Solver + Skill Controller | [阅读](skill-self-play.md) |
-| Native Evolution | Explorer + World Knowledge | [阅读](native-evolution.md) |
-| SAGE | Challenger + Planner + Solver + Critic | [阅读](sage.md) |
+| [R-Zero](https://arxiv.org/abs/2508.05004) | Challenger + Solver | 如何维持能力边界任务与可靠 verifier？ |
+| [Socratic-SWE](https://arxiv.org/abs/2606.07412) | Skill → Task → Solver | 真实仓库任务如何避免数据泄漏？ |
+| [Skill Self-Play](https://arxiv.org/abs/2607.22529) | Proposer + Solver + Skill Controller | 任务、Skill 与策略如何避免共同退化？ |
+| [Native Evolution](https://arxiv.org/abs/2604.18131) | Explorer + World Knowledge | 无外部奖励时如何验证环境知识的价值？ |
+| [SAGE](https://arxiv.org/abs/2603.15255) | Challenger + Planner + Solver + Critic | 多角色分工是否带来独立信息而非重复对话？ |
 
 ## 阅读原则
 

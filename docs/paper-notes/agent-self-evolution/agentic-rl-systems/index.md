@@ -19,14 +19,16 @@ flowchart LR
     I --> J[Deploy / Rollback]
 ```
 
-## 单篇解读
+## 待深读论文清单
 
-| 论文 | 核心对象 | 单篇解读 |
+本方向尚未发布完整单篇解读。以下论文需要分别核对系统架构、数据协议、在线评测和回滚条件。
+
+| 论文 | 核心对象 | 重点阅读问题 |
 | --- | --- | --- |
-| Next-Generation Agentic RL Systems | 企业轨迹与演化控制平面 | [阅读](next-generation-agentic-rl.md) |
-| WebEvolver | Web Agent 与 World Model | [阅读](webevolver.md) |
-| AgentEvolver | 自提问、探索与信用分配 | [阅读](agentevolver.md) |
-| RLCER | 自演化 Rubric 与训练信号 | [阅读](../verifier-rubric/rlcer.md) |
+| [Next-Generation Agentic RL Systems](https://arxiv.org/abs/2607.01120) | 企业轨迹与演化控制平面 | 生产轨迹如何被治理、归因和回滚？ |
+| [WebEvolver](https://aclanthology.org/2025.emnlp-main.454/) | Web Agent 与 World Model | 世界模型的模拟收益如何与真实网页收益区分？ |
+| [AgentEvolver](https://arxiv.org/abs/2511.10395) | 自提问、探索与信用分配 | 长轨迹 credit assignment 如何被验证？ |
+| [RLCER](https://arxiv.org/abs/2602.10885) | 自演化 Rubric 与训练信号 | Rubric 演化如何和系统级更新协同？ |
 
 ## 阅读原则
 
