@@ -17,7 +17,7 @@
 
 | 专题 | 范围 | 内容 |
 | --- | --- | --- |
-| [Agent 自进化](agent-self-evolution/index.md) | 记忆、Skill、Verifier、Self-Play、Agentic RL、评测与安全 | 按方向总览与单篇阅读组织 |
+| [Agent 自进化](agent-self-evolution/index.md) | 记忆、Skill、Verifier、Self-Play、Agentic RL、RSI、评测与安全 | 按方向总览与单篇阅读组织 |
 
 ## 单篇阅读
 

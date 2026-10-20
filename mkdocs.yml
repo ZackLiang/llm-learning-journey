@@ -112,6 +112,8 @@ nav:
               - 总览: paper-notes/agent-self-evolution/evaluation-safety/index.md
               - Rethinking Self-Evolving Agent Skills: paper-notes/rethinking-self-evolving-agent-skills.md
               - Selection Is Not Learning: paper-notes/agent-self-evolution/evaluation-safety/selection-is-not-learning.md
+          - 07. Recursive Self-Improvement（RSI）:
+              - 专题总览: paper-notes/agent-self-evolution/rsi/index.md
   - 个人项目:
       - 专题总览: personal-projects/index.md
       - 亲手实现: implementations/index.md

@@ -43,6 +43,7 @@ Verifier 是否可靠，能否提供可归因的反馈？
 | [自生成任务与 Self-Play](self-play-curriculum/index.md) | 挑战任务、课程、角色策略 | R-Zero、Skill Self-Play、Native Evolution、SAGE | 谁出题，如何避免课程退化或无效更新？ |
 | [Agentic RL 与系统](agentic-rl-systems/index.md) | 策略、轨迹数据、控制平面 | AReaL 2.0、WebEvolver、AgentEvolver | 如何在生产环境收集轨迹并安全更新系统？ |
 | [评测、安全与反过拟合](evaluation-safety/index.md) | 选择规则、Skill 继承、评测器 | Rethinking、EvoMemBench、SkillEvoReg、SkillSandbox | 如何证明“进化”不是过拟合或额外采样？ |
+| [Recursive Self-Improvement（RSI）](rsi/index.md) | Agent Harness、代码、改进机制 | DGM、SICA、Hyperagents、AIDE²、RRSI | 新版本能否递归地改进自身，并在独立证据下安全继承？ |
 
 ## 已核验的校企合作代表论文
 
@@ -88,6 +89,16 @@ Rethinking Self-Evolving Agent Skills
 → SkillEvoReg
 → SkillSandbox
 → Selection Is Not Learning
+```
+
+### 路线 D：理解严格 RSI
+
+```text
+UMEM
+→ R-Zero
+→ Selection Is Not Learning
+→ Recursive Self-Improvement（RSI）专题
+→ Darwin Godel Machine
 ```
 
 ## 阅读原则
