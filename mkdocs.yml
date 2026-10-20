@@ -78,18 +78,40 @@ nav:
           - 专题总览: paper-notes/agent-self-evolution/index.md
           - 01. 记忆演化:
               - 总览: paper-notes/agent-self-evolution/memory/index.md
-              - UMEM（详细解读）: paper-notes/agent-self-evolution/memory/umem.md
+              - UMEM: paper-notes/agent-self-evolution/memory/umem.md
+              - MemRL: paper-notes/agent-self-evolution/memory/memrl.md
+              - MemSkill: paper-notes/agent-self-evolution/memory/memskill.md
+              - TMEM: paper-notes/agent-self-evolution/memory/tmem.md
+              - EvoMemBench: paper-notes/agent-self-evolution/memory/evomembench.md
           - 02. Skill 与 SOP 演化:
               - 总览: paper-notes/agent-self-evolution/skill-sop/index.md
+              - EvoSOP: paper-notes/agent-self-evolution/skill-sop/evosop.md
+              - Socratic-SWE: paper-notes/agent-self-evolution/skill-sop/socratic-swe.md
+              - MUSE-Autoskill: paper-notes/agent-self-evolution/skill-sop/muse-autoskill.md
+              - CoEvoSkills: paper-notes/agent-self-evolution/skill-sop/coevoskills.md
+              - SkillEvoReg: paper-notes/agent-self-evolution/skill-sop/skillevoreg.md
+              - SkillScriptBench: paper-notes/agent-self-evolution/skill-sop/skillscriptbench.md
           - 03. Verifier 与 Rubric 演化:
               - 总览: paper-notes/agent-self-evolution/verifier-rubric/index.md
+              - DeepVerifier: paper-notes/agent-self-evolution/verifier-rubric/deepverifier.md
+              - RLCER: paper-notes/agent-self-evolution/verifier-rubric/rlcer.md
+              - EVE-Agent: paper-notes/agent-self-evolution/verifier-rubric/eve-agent.md
+              - SkillSandbox: paper-notes/agent-self-evolution/verifier-rubric/skillsandbox.md
           - 04. 自生成任务与 Self-Play:
               - 总览: paper-notes/agent-self-evolution/self-play-curriculum/index.md
+              - R-Zero: paper-notes/agent-self-evolution/self-play-curriculum/r-zero.md
+              - Native Evolution: paper-notes/agent-self-evolution/self-play-curriculum/native-evolution.md
+              - SAGE: paper-notes/agent-self-evolution/self-play-curriculum/sage.md
+              - Skill Self-Play: paper-notes/agent-self-evolution/self-play-curriculum/skill-self-play.md
           - 05. Agentic RL 与系统:
               - 总览: paper-notes/agent-self-evolution/agentic-rl-systems/index.md
+              - AgentEvolver: paper-notes/agent-self-evolution/agentic-rl-systems/agentevolver.md
+              - WebEvolver: paper-notes/agent-self-evolution/agentic-rl-systems/webevolver.md
+              - Next-Generation Agentic RL Systems: paper-notes/agent-self-evolution/agentic-rl-systems/next-generation-agentic-rl.md
           - 06. 评测、安全与反过拟合:
               - 总览: paper-notes/agent-self-evolution/evaluation-safety/index.md
-              - Rethinking Self-Evolving Agent Skills（详细解读）: paper-notes/rethinking-self-evolving-agent-skills.md
+              - Rethinking Self-Evolving Agent Skills: paper-notes/rethinking-self-evolving-agent-skills.md
+              - Selection Is Not Learning: paper-notes/agent-self-evolution/evaluation-safety/selection-is-not-learning.md
   - 个人项目:
       - 专题总览: personal-projects/index.md
       - 亲手实现: implementations/index.md

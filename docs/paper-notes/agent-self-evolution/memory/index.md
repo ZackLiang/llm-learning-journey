@@ -26,22 +26,28 @@ flowchart LR
 - 错误记忆如何被发现、修订、遗忘或回滚；
 - 外部记忆、参数记忆和记忆策略学习分别适合什么场景。
 
-## 已完成单篇详细解读
+## 单篇阅读
 
 | 论文 | 记忆对象 | 文章 |
 | --- | --- | --- |
-| UMEM | 外部 Memory Bank 与管理策略 | [详细解读](umem.md) |
+| UMEM | 外部 Memory Bank 与管理策略 | [阅读笔记](umem.md) |
+| [TMEM](tmem.md) | LoRA Fast Weights 参数记忆 | 参数记忆如何在 episode 内改变策略？ |
+| [MemRL](memrl.md) | 非参数 Episodic Memory | 如何在运行时用 RL 优化记忆使用？ |
+| [MemSkill](memskill.md) | Memory Skill | 如何把记忆操作本身作为可演化技能？ |
+| [EvoMemBench](evomembench.md) | 记忆能力评测 | 如何区分知识记忆、执行记忆与真正泛化？ |
 
-## 待深读论文清单
+## 阅读顺序
 
-以下工作已完成身份和方向核验，但尚未完成原文图表、实验设置、主结果与消融实验的逐项解读；因此暂不作为本地单篇文章发布。
+建议先把四种“记忆写入位置”区分开：
 
-| 论文 | 记忆对象 | 重点阅读问题 |
-| --- | --- | --- |
-| [TMEM](https://arxiv.org/abs/2606.04536) | LoRA Fast Weights 参数记忆 | 经验如何在 episode 内写入策略参数？ |
-| [MemRL](https://arxiv.org/abs/2601.03192) | 非参数 Episodic Memory | 如何在运行时用 RL 优化记忆使用？ |
-| [MemSkill](https://arxiv.org/abs/2602.02474) | Memory Skill | 如何把记忆操作本身作为可演化技能？ |
-| [EvoMemBench](https://arxiv.org/abs/2605.18421) | 记忆能力评测 | 如何区分知识记忆、执行记忆与真正泛化？ |
+```text
+MemRL：把记忆条目的使用策略变成可学习的 Q 值
+MemSkill：把记忆提取、更新和删除写成可演化 Skill
+UMEM：联合优化记忆提取与 Memory Bank 管理
+TMEM：把经验进一步写入 episode 内的 LoRA Fast Weights
+```
+
+EvoMemBench 放在最后阅读，用它检查前面方法到底测到了哪一种记忆能力。
 
 ## 方法比较
 
@@ -66,4 +72,4 @@ flowchart LR
 是否报告错误记忆、遗忘和回滚？
 ```
 
-UMEM 的详细解读包含原文 Figure 1/2、主结果 Table 1、消融 Table 2、连续演化曲线、训练设置和证据边界分析；其余论文会按相同标准逐篇补充。
+每篇文章均按照“研究问题 - 方法 - 实验协议 - 原文图表 - 结果解释 - 消融与边界 - 高频问题”的顺序展开。数值只在论文原文明确报告时保留；无法由实验直接推出的结论会单独标注。

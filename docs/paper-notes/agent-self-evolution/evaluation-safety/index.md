@@ -22,21 +22,25 @@ flowchart TD
     J --> K
 ```
 
-## 已完成单篇详细解读
+## 单篇阅读
 
 | 论文 | 关注问题 | 文章 |
 | --- | --- | --- |
-| Rethinking Self-Evolving Agent Skills | 多轮反馈、验证门控、测试时对照 | [详细解读](../../rethinking-self-evolving-agent-skills.md) |
+| Rethinking Self-Evolving Agent Skills | 多轮反馈、验证门控、测试时对照 | [阅读笔记](../../rethinking-self-evolving-agent-skills.md) |
+| [EvoMemBench](../memory/evomembench.md) | Memory 评测 | 时间尺度、知识/执行记忆与跨环境迁移 |
+| [SkillEvoReg](../skill-sop/skillevoreg.md) | Skill 过拟合 | 复杂度、反例验证与长期库治理 |
+| [SkillSandbox](../verifier-rubric/skillsandbox.md) | Skill 动态验证 | 场景合成和 with/without Skill 对照 |
+| [Selection Is Not Learning](selection-is-not-learning.md) | 模型继承选择 | 新鲜 probe、经验归档与 HEIRCOMMIT |
 
-## 待深读论文清单
+## 阅读顺序
 
-| 论文 | 关注问题 | 重点阅读问题 |
-| --- | --- | --- |
-| [EvoMemBench](https://arxiv.org/abs/2605.18421) | Memory 评测 | 评测轴是否覆盖记忆的时间与行为影响？ |
-| [SkillEvoReg](https://arxiv.org/abs/2609.30861) | Skill 过拟合 | 正则化是否真正改善外部泛化？ |
-| [SkillSandbox](https://arxiv.org/abs/2610.10088) | Skill 动态验证 | sandbox 对照的外部有效性如何验证？ |
-| [Selection Is Not Learning](https://arxiv.org/abs/2610.22029) | 更新继承选择 | 新鲜评测题如何决定更新是否值得保留？ |
-| 长期安全综述方向 | 长期安全风险 | 错误经验跨任务传播的机制与缓解措施是什么？ |
+```text
+Rethinking：先理解多轮演化为什么可能只是选择和采样效应
+→ Selection Is Not Learning：确认“新模型是否值得继承”
+→ SkillEvoReg：约束持久化 Skill 的结构膨胀和回归
+→ SkillSandbox：用动态执行场景验证 Skill 可复用性
+→ EvoMemBench：用统一评测轴检查不同记忆系统的真实能力
+```
 
 ## 阅读原则
 
@@ -48,3 +52,5 @@ Validation 是否仅用于选择而非最终报告？
 错误经验是否可被回滚？
 安全问题是否会跨任务长期传播？
 ```
+
+长期安全不是单独的末尾检查。对任何持久化更新，都应记录来源、权限、验证证据、版本和回滚路径；否则一次局部错误可能通过 Memory、Skill 或参数状态跨任务放大。

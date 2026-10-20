@@ -16,18 +16,27 @@ flowchart LR
     H --> A
 ```
 
-## 待深读论文清单
+## 单篇阅读
 
-本方向尚未发布完整单篇解读。以下论文将在完成原文方法、实验表和证据边界核验后，逐篇转为本地文章。
-
-| 论文 | 主要对象 | 重点阅读问题 |
+| 论文 | 主要对象 | 入口 |
 | --- | --- | --- |
-| [EvoSOP](https://arxiv.org/abs/2607.07321) | 原子动作到高阶 SOP | SOP 构建、合并、评估与剪枝如何协同？ |
-| [Socratic-SWE](https://arxiv.org/abs/2606.07412) | 编码 Agent Skill 与课程生成 | Skill 如何驱动可验证任务生成与 Solver 更新？ |
-| [MUSE-Autoskill](https://arxiv.org/abs/2605.27366) | Skill 生命周期 | Skill 如何创建、检索、修订、合并与退役？ |
-| [CoEvoSkills](https://arxiv.org/abs/2604.01687) | Skill Package 与 Surrogate Verifier | 生成器与替代验证器如何避免共同偏差？ |
-| [SkillScriptBench](https://arxiv.org/abs/2610.04008) | 可执行 Skill Package 评测 | Skill 如何在安装、执行、修复与迁移层面被评估？ |
-| [SkillEvoReg](https://arxiv.org/abs/2609.30861) | 演化中的过拟合与正则 | 如何避免 Skill 库膨胀和局部验证过拟合？ |
+| [EvoSOP](evosop.md) | 原子动作到高阶 SOP | 构建、合并、评估与剪枝 |
+| [Socratic-SWE](socratic-swe.md) | 编码 Agent Skill 与课程生成 | 轨迹提炼、仓库任务与梯度对齐 |
+| [MUSE-Autoskill](muse-autoskill.md) | Skill 生命周期 | 创建、记忆、管理、评测与跨 Agent 使用 |
+| [CoEvoSkills](coevoskills.md) | 多文件 Skill Package | 共同演化 Generator 与 Surrogate Verifier |
+| [SkillEvoReg](skillevoreg.md) | Skill 演化正则 | 控制膨胀、反例验证与长期泛化 |
+| [SkillScriptBench](skillscriptbench.md) | 可执行 Skill Package 评测 | 文档、脚本、一致性与保真 |
+
+## 阅读顺序
+
+```text
+EvoSOP：为什么生成能力后还要合并和剪枝
+→ MUSE-Autoskill：Skill 的完整生命周期和成本账
+→ CoEvoSkills：隐藏测试下如何共同演化 Skill 与验证器
+→ SkillScriptBench：如何把 Skill 的可执行性与保真测清楚
+→ SkillEvoReg：长期演化如何防止局部更新逐渐过拟合
+→ Socratic-SWE：如何把 Skill 接到代码 Agent 任务生成与 RL 训练
+```
 
 ## 阅读重点
 
@@ -37,3 +46,5 @@ Skill 是否比原子工具有边际效用？
 Skill 是否在未见任务上可复用？
 Skill 是否有版本、验证、合并、淘汰和回滚？
 ```
+
+注意：Skill 可“生成”不等于可“继承”。每篇文章中的结果需结合任务可执行性、独立验证、库规模、成本和跨任务迁移一起判断。

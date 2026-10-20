@@ -19,16 +19,22 @@ flowchart LR
     I --> J[Deploy / Rollback]
 ```
 
-## 待深读论文清单
+## 单篇阅读
 
-本方向尚未发布完整单篇解读。以下论文需要分别核对系统架构、数据协议、在线评测和回滚条件。
-
-| 论文 | 核心对象 | 重点阅读问题 |
+| 论文 | 核心对象 | 入口 |
 | --- | --- | --- |
-| [Next-Generation Agentic RL Systems](https://arxiv.org/abs/2607.01120) | 企业轨迹与演化控制平面 | 生产轨迹如何被治理、归因和回滚？ |
-| [WebEvolver](https://aclanthology.org/2025.emnlp-main.454/) | Web Agent 与 World Model | 世界模型的模拟收益如何与真实网页收益区分？ |
-| [AgentEvolver](https://arxiv.org/abs/2511.10395) | 自提问、探索与信用分配 | 长轨迹 credit assignment 如何被验证？ |
-| [RLCER](https://arxiv.org/abs/2602.10885) | 自演化 Rubric 与训练信号 | Rubric 演化如何和系统级更新协同？ |
+| [AgentEvolver](agentevolver.md) | 自提问、探索与信用分配 | 任务、经验与长轨迹归因 |
+| [WebEvolver](webevolver.md) | Web Agent 与 World Model | 模拟轨迹与推理时 look-ahead |
+| [Next-Generation Agentic RL Systems](next-generation-agentic-rl.md) | 企业轨迹与演化控制平面 | ATDP、Data Proxy、Control Plane、AReaL 2.0 |
+| [RLCER](../verifier-rubric/rlcer.md) | 自演化 Rubric 与训练信号 | Reward 组件如何本身成为演化对象 |
+
+## 阅读顺序
+
+```text
+AgentEvolver：训练回路的三个算法瓶颈
+→ WebEvolver：加入环境 World Model 后如何训练和规划
+→ Next-Generation Agentic RL Systems：如何把轨迹、数据治理和更新控制做成系统
+```
 
 ## 阅读原则
 
@@ -39,3 +45,5 @@ Memory、Skill、Harness、权重更新是否被分别控制？
 线上更新是否有版本、权限与回滚？
 改进是否来自真实执行，而非模拟或额外测试预算？
 ```
+
+系统方向的论文尤其需要说明“更新发生在哪里”：模型权重、Memory、Skill、Tool Harness 或 workflow 的风险和回滚方式完全不同。

@@ -15,15 +15,15 @@
 
 ## 专题阅读
 
-| 专题 | 范围 | 当前状态 |
+| 专题 | 范围 | 内容 |
 | --- | --- | --- |
-| [Agent 自进化](agent-self-evolution/index.md) | 记忆、Skill、Verifier、Self-Play、Agentic RL、评测与安全 | 已建立研究地图与论文资料卡 |
+| [Agent 自进化](agent-self-evolution/index.md) | 记忆、Skill、Verifier、Self-Play、Agentic RL、评测与安全 | 按方向总览与单篇阅读组织 |
 
-## 单篇深度解读
+## 单篇阅读
 
-| 论文 | 主题 | 阅读状态 |
+| 论文 | 主题 | 入口 |
 | --- | --- | --- |
-| [Agent Skill 自进化的反馈动力学：论文解读](rethinking-self-evolving-agent-skills.md) | Agent Skill Evolution、反馈条件、验证门控与泛化评测 | 已完成首轮解读 |
+| [Agent Skill 自进化的反馈动力学](rethinking-self-evolving-agent-skills.md) | Agent Skill Evolution、反馈条件、验证门控与泛化评测 | [阅读笔记](rethinking-self-evolving-agent-skills.md) |
 
 ## 后续范围
 

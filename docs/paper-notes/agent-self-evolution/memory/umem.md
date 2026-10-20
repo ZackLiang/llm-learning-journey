@@ -4,7 +4,7 @@
 > 作者：Yongshi Ye, Hui Jiang, Feihu Jiang, Tian Lan, Yichao Du, Biao Fu, Xiaodong Shi, Qianghuai Jia, Longyue Wang, Weihua Luo<br>
 > 作者单位：厦门大学、Alibaba International Digital Commerce Group、Tongyi Lab。<br>
 > 研究类型：Agent 长期记忆、外部 Memory Bank、记忆策略强化学习。<br>
-> 阅读状态：**详细解读**。本文依据论文 PDF 的方法、实验和附录信息整理；图表均为原文 Figure/Table 裁图。
+> 本文依据论文 PDF 的方法、实验和附录信息整理；图表均为原文 Figure/Table 裁图。
 
 ## 摘要
 
