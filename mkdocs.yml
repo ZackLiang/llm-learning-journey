@@ -112,8 +112,15 @@ nav:
               - 总览: paper-notes/agent-self-evolution/evaluation-safety/index.md
               - Rethinking Self-Evolving Agent Skills: paper-notes/rethinking-self-evolving-agent-skills.md
               - Selection Is Not Learning: paper-notes/agent-self-evolution/evaluation-safety/selection-is-not-learning.md
-          - 07. Recursive Self-Improvement（RSI）:
+          - 07. RSI:
               - 专题总览: paper-notes/agent-self-evolution/rsi/index.md
+              - STOP: paper-notes/agent-self-evolution/rsi/stop.md
+              - SICA: paper-notes/agent-self-evolution/rsi/sica.md
+              - Darwin Godel Machine: paper-notes/agent-self-evolution/rsi/dgm.md
+              - Hyperagents: paper-notes/agent-self-evolution/rsi/hyperagents.md
+              - AIDE²: paper-notes/agent-self-evolution/rsi/aide2.md
+              - RRSI: paper-notes/agent-self-evolution/rsi/rrsi.md
+              - AlphaEvolve: paper-notes/agent-self-evolution/rsi/alphaevolve.md
   - 个人项目:
       - 专题总览: personal-projects/index.md
       - 亲手实现: implementations/index.md

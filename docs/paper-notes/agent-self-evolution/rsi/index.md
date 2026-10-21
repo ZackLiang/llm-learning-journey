@@ -1,6 +1,6 @@
-# Recursive Self-Improvement（RSI）
+# RSI
 
-> 范围：以 Agent 或 Agent Harness 为对象的递归自我改进。本文主要覆盖 2025 年至 2026 年 10 月的代表性工作，并保留 STOP 作为概念起点。<br>
+> Recursive Self-Improvement：以 Agent 或 Agent Harness 为对象的递归自我改进。本文主要覆盖 2025 年至 2026 年 10 月的代表性工作，并保留 STOP 作为概念起点。<br>
 > 核心问题：一个系统能否改进自身的代码、工作流、工具、记忆和改进机制；被接受的新版本能否继续成为下一轮改进的主体；以及如何证明这种递归没有退化为 benchmark 过拟合、选择偏差或 reward hacking。
 
 ## 1. RSI 到底是什么
@@ -94,17 +94,17 @@ R-Zero 会自生成课程并更新 Challenger/Solver 的策略，但其基本的
 
 这更接近算法搜索或程序进化；只有当“被优化的对象”也包括改进 Agent 自己的能力结构时，才进入严格 RSI。
 
-## 4. 代表性工作地图
+## 4. 单篇阅读
 
-| 工作 | 时间 | 改进对象 | 是否严格 RSI | 应如何定位 |
+| 工作 | 时间 | 改进对象 | 定位 | 入口 |
 | --- | --- | --- | ---: | --- |
-| [STOP](https://arxiv.org/abs/2310.02304) | 2023 | Improver program | 概念原型 | 递归改进的最小程序化表述 |
-| [SICA](https://arxiv.org/abs/2504.15228) | 2025 | Coding Agent 自身代码 | 是 | 直接自编辑 Agent 的早期代表 |
-| [Darwin Godel Machine](https://arxiv.org/abs/2505.22954) | 2025 / ICLR 2026 | Agent Code、工具、上下文策略与 archive | 是 | 当前最重要的开放式 RSI 路线之一 |
-| [AlphaEvolve](https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) | 2025 | 外部程序与算法 | 相邻工作 | 高影响力算法进化，不应与严格 RSI 混为一谈 |
-| [Hyperagents](https://arxiv.org/abs/2603.19461) | 2026 | Agent 生成和修改机制本身 | 是，元级 | 更接近“改进如何改进”的递归结构 |
-| [AIDE²](https://arxiv.org/abs/2609.26457) | 2026 | AI Research Agent 的代码和研究流程 | 是 | 将 RSI 放入 AI R&D Agent 的实证尝试 |
-| [RRSI](https://arxiv.org/abs/2609.24972) | 2026 | Agent Harness 与其演化过程 | 是，带约束 | 关注 RSI 的泛化、复杂度和 reward hacking |
+| [STOP](stop.md) | 2023 | Improver program | 概念原型 | [阅读笔记](stop.md) |
+| [SICA](sica.md) | 2025 | Coding Agent 自身代码 | Harness 自修改 | [阅读笔记](sica.md) |
+| [Darwin Godel Machine](dgm.md) | 2025 / ICLR 2026 | Agent Code、工具、上下文策略与 archive | 严格 RSI 主线 | [阅读笔记](dgm.md) |
+| [Hyperagents](hyperagents.md) | 2026 | Agent 生成和修改机制本身 | 元级 RSI | [阅读笔记](hyperagents.md) |
+| [AIDE²](aide2.md) | 2026 | AI Research Agent 的代码和研究流程 | AI R&D RSI | [阅读笔记](aide2.md) |
+| [RRSI](rrsi.md) | 2026 | Agent Harness 与其演化过程 | 泛化与成本治理 | [阅读笔记](rrsi.md) |
+| [AlphaEvolve](alphaevolve.md) | 2025 | 外部程序与算法 | 相邻算法进化 | [阅读笔记](alphaevolve.md) |
 
 ### 4.1 STOP：概念起点，而不是当前 SOTA
 
