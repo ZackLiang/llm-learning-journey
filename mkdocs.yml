@@ -57,26 +57,24 @@ nav:
   - 学习笔记:
       - 学习路线: roadmap.md
       - 专题总览: notes/index.md
-      - Transformer 专题:
-          - 专题总览: notes/transformer/index.md
-          - 01. 整体架构: notes/transformer/01-big-picture.md
-          - 02. Attention 与位置编码: notes/transformer/02-attention-position.md
-          - 03. Block、FFN 与训练: notes/transformer/03-block-training.md
-          - 04. Decoder-only 与推理: notes/transformer/04-decoder-inference.md
-          - 05. 现代 Transformer: notes/transformer/05-modern-variants.md
-          - 学习反思: notes/transformer/reflection.md
-      - 模型内部结构: notes/model-internals.md
-      - 训练与对齐: notes/training.md
-      - 评测: notes/evaluation.md
-      - 推理与系统: notes/inference.md
-      - RAG 与 Agent: notes/rag-agents.md
-      - 上下文管理:
-          - 专题总览: notes/context-management/index.md
-          - 01. 上下文工程基础: notes/context-management/01-context-engineering.md
-          - 02. 可逆卸载与按需检索: notes/context-management/02-offload-retrieval.md
-          - 03. 可恢复摘要与压缩: notes/context-management/03-summarization-compaction.md
-          - 04. 上下文隔离与子 Agent: notes/context-management/04-context-isolation.md
-          - 05. KV Cache 与 Prompt Cache: notes/context-management/05-context-caching.md
+      - 01. 模型与架构:
+          - Transformer 专题:
+              - 专题总览: notes/transformer/index.md
+              - 01. 整体架构: notes/transformer/01-big-picture.md
+              - 02. Attention 与位置编码: notes/transformer/02-attention-position.md
+              - 03. Block、FFN 与训练: notes/transformer/03-block-training.md
+              - 04. Decoder-only 与推理: notes/transformer/04-decoder-inference.md
+              - 05. 现代 Transformer: notes/transformer/05-modern-variants.md
+              - 学习反思: notes/transformer/reflection.md
+          - 模型内部结构: notes/model-internals.md
+      - 02. Agent 工程:
+          - 上下文管理: notes/context-management/index.md
+          - RAG 与 Agent: notes/rag-agents.md
+      - 03. 训练与评测:
+          - 训练与对齐: notes/training.md
+          - 评测: notes/evaluation.md
+      - 04. 推理与系统:
+          - 推理与系统: notes/inference.md
   - 前沿开源项目解读:
       - 专题总览: projects/index.md
   - 论文阅读:
