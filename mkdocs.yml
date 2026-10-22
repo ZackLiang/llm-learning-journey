@@ -70,6 +70,7 @@ nav:
       - 评测: notes/evaluation.md
       - 推理与系统: notes/inference.md
       - RAG 与 Agent: notes/rag-agents.md
+      - 上下文管理: notes/context-management/index.md
   - 前沿开源项目解读:
       - 专题总览: projects/index.md
   - 论文阅读:
