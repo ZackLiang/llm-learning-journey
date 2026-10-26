@@ -14,11 +14,9 @@
 6. **工程取舍**：性能、成本、可靠性、可维护性与可扩展性的权衡。
 7. **局限与判断**：公开信息没有说明什么，哪些结论仍需通过实际运行验证。
 
-## 已收录解读
+## 当前状态
 
-### [Codex 源码解读：从一次 Turn 到长程 Goal 的 Agent Harness](codex-source.md)
-
-以 OpenAI 公开仓库 `openai/codex` 的固定 commit 为锚点，追踪任务从 `Session`、`Turn`、模型请求、工具路由到 `FunctionCallOutput` 回写历史的主路径。文章进一步区分长命令、上下文压缩与持久化、Thread Goal、多 Agent、`AGENTS.md`、审批/沙箱、Skills、Code Mode 与 Computer Use 的公开实现边界。
+该专题暂未收录正式项目复盘。后续只添加已经完成源码阅读、系统分析或实际复现的具体项目，避免将概念学习笔记与项目解读混在一起。
 
 ## 单篇解读模板
 

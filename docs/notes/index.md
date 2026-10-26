@@ -23,6 +23,7 @@ flowchart LR
 | 主题 | 内容 | 入口 |
 | --- | --- | --- |
 | 上下文管理 | 工作集、外部化检索、可恢复摘要、子 Agent 隔离、KV/Prompt Cache | [完整笔记](context-management/index.md) |
+| Codex Agent Harness | 以 Codex 公开源码为案例，理解 Agent Loop、工具路由、长任务、上下文、协作与权限边界 | [完整笔记](codex-agent-harness.md) |
 | RAG 与 Agent | 检索、工具调用、记忆与工作流 | [笔记](rag-agents.md) |
 
 ## 03. 训练与评测

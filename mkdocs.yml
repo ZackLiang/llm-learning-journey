@@ -69,6 +69,7 @@ nav:
           - 模型内部结构: notes/model-internals.md
       - 02. Agent 工程:
           - 上下文管理: notes/context-management/index.md
+          - Codex Agent Harness: notes/codex-agent-harness.md
           - RAG 与 Agent: notes/rag-agents.md
       - 03. 训练与评测:
           - 训练与对齐: notes/training.md
@@ -77,7 +78,6 @@ nav:
           - 推理与系统: notes/inference.md
   - 前沿开源项目解读:
       - 专题总览: projects/index.md
-      - Codex 源码解读: projects/codex-source.md
   - 论文阅读:
       - 专题总览: paper-notes/index.md
       - Agent 自进化:
